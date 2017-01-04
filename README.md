@@ -15,7 +15,7 @@
 <code>$ npm install bower -g</code>
 ##2、初始化bower配置文件##
 <code>$ bower init</code>
->提示：默认的依赖是放置在bower_components目录下，这并不是我们想要的，因为在 Express项目中默认的静态文件放置在public目录下，所以需要设置放置目录为public目录
+<p>提示：默认的依赖是放置在bower_components目录下，这并不是我们想要的，因为在 Express项目中默认的静态文件放置在public目录下，所以需要设置放置目录为public目录</p>
 ##3、在工程目录下创建配置文件.bowerrc(名字固定)，配置信息如下：##
 <code>{
 	"directory":"public/lib"
