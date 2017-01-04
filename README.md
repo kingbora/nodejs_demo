@@ -1,27 +1,25 @@
-´´½¨ExpressÓ¦ÓÃ
-1¡¢È«¾Ö°²×°nodejs
-$ npm install nodejs -g
-2¡¢È«¾Ö°²×°express-generator³õÊ¼»¯ÏîÄ¿
-$ npm install express-generator -g
-3¡¢Ê¹ÓÃejsÄ£¿éµÄÃû³ÆÎªmyappµÄwebÓ¦ÓÃ
-$ express --ejs myapp
-4¡¢ÏÂÔØÏà¹ØÒÀÀµ
-$ npm install
-5¡¢ÔËĞĞExpressÓ¦ÓÃ
-$ node bin/www
-ÔÚä¯ÀÀÆ÷ÖĞÊäÈëhttp://localhost:3000¼´¿É¿´¼ûÔËĞĞ½á¹û
-
-Ê¹ÓÃbower³õÊ¼»¯Ç°¶ËÏîÄ¿Ä¿Â¼
-1¡¢È«¾Ö°²×°bower
-$ npm install bower -g
-2¡¢³õÊ¼»¯bowerÅäÖÃÎÄ¼ş
-$ bower init
-ÌáÊ¾£ºÄ¬ÈÏµÄÒÀÀµÊÇ·ÅÖÃÔÚbower_componentsÄ¿Â¼ÏÂ£¬
-Õâ²¢²»ÊÇÎÒÃÇÏëÒªµÄ£¬ÒòÎªÔÚ ExpressÏîÄ¿ÖĞÄ¬ÈÏµÄ¾²Ì¬ÎÄ¼ş·ÅÖÃÔÚpublicÄ¿Â¼ÏÂ£¬
-ËùÒÔĞèÒªÉèÖÃ·ÅÖÃÄ¿Â¼ÎªpublicÄ¿Â¼
-3¡¢ÔÚ¹¤³ÌÄ¿Â¼ÏÂ´´½¨ÅäÖÃÎÄ¼ş.bowerrc(Ãû×Ö¹Ì¶¨)£¬ÅäÖÃĞÅÏ¢ÈçÏÂ£º
-{
+#åˆ›å»ºExpressåº”ç”¨#
+##1ã€å…¨å±€å®‰è£…nodejs##
+<code>$ npm install nodejs -g</code>
+##2ã€å…¨å±€å®‰è£…express-generatoråˆå§‹åŒ–é¡¹ç›®##
+<code>$ npm install express-generator -g</code>
+##3ã€ä½¿ç”¨ejsæ¨¡å—çš„åç§°ä¸ºmyappçš„webåº”ç”¨##
+<code>$ express --ejs myapp</code>
+##4ã€ä¸‹è½½ç›¸å…³ä¾èµ–##
+<code>$ npm install</code>
+##5ã€è¿è¡ŒExpressåº”ç”¨##
+<code>$ node bin/www</code>
+åœ¨æµè§ˆå™¨ä¸­è¾“å…¥[http://localhost:3000](http://localhost:3000)å³å¯çœ‹è§è¿è¡Œç»“æœ
+#ä½¿ç”¨boweråˆå§‹åŒ–å‰ç«¯é¡¹ç›®ç›®å½•#
+##1ã€å…¨å±€å®‰è£…bower##
+<code>$ npm install bower -g</code>
+##2ã€åˆå§‹åŒ–boweré…ç½®æ–‡ä»¶##
+<code>$ bower init</code>
+>æç¤ºï¼šé»˜è®¤çš„ä¾èµ–æ˜¯æ”¾ç½®åœ¨bower_componentsç›®å½•ä¸‹ï¼Œè¿™å¹¶ä¸æ˜¯æˆ‘ä»¬æƒ³è¦çš„ï¼Œå› ä¸ºåœ¨ Expressé¡¹ç›®ä¸­é»˜è®¤çš„é™æ€æ–‡ä»¶æ”¾ç½®åœ¨publicç›®å½•ä¸‹ï¼Œæ‰€ä»¥éœ€è¦è®¾ç½®æ”¾ç½®ç›®å½•ä¸ºpublicç›®å½•
+##3ã€åœ¨å·¥ç¨‹ç›®å½•ä¸‹åˆ›å»ºé…ç½®æ–‡ä»¶.bowerrc(åå­—å›ºå®š)ï¼Œé…ç½®ä¿¡æ¯å¦‚ä¸‹ï¼š##
+<code>{
 	"directory":"public/lib"
 }
-4¡¢°²×°Ç°¶Ë¿âÎÄ¼ş
-$ bower install bootstrap --save
+</code>
+##4ã€å®‰è£…å‰ç«¯åº“æ–‡ä»¶##
+<code>$ bower install bootstrap --save</code>
