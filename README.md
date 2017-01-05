@@ -9,7 +9,7 @@
 <code>$ npm install</code>
 ### 5、运行Express应用
 <code>$ node bin/www</code>
-<p>在浏览器中输入[http://localhost:3000](http://localhost:3000)即可看见运行结果</p>
+在浏览器中输入[http://localhost:3000](http://localhost:3000)
 ## 使用bower初始化前端项目目录
 ### 1、全局安装bower
 <code>$ npm install bower -g</code>
@@ -40,6 +40,7 @@ app.set('view engine', 'html');
 * header.html —— 页面头部区域
 * index.html —— 页面内容区域
 * footer.html —— 页面底部区域
+
 <strong>header.html</strong>
 ```html
 <!DOCTYPE html>
