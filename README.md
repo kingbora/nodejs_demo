@@ -70,3 +70,100 @@ app.set('view engine', 'html');
 重启服务，重新访问。
 ## 登陆案例
 ### 1、前端登陆页
+<p>修改<strong>index.html</strong>,增加登录按钮</p>
+```html
+<% include header.html %>
+<h1><%= title %></h1>
+<p>Welcome to <%= title %></p>
+<p><a href="/login">登录</a></p>
+<% include footer.html %>
+```
+<strong>login.html</strong>
+```html
+<% include header.html %>
+<div class="container">
+	<form class="col-sm-offset-4 col-sm-4 form-horizontal" role="form" method="post">
+		<fieldset>
+			<legend>用户登录</legend>
+			<div class="form-group">
+				<label class="col-sm-3 control-label" for="username">用户名</label>
+				<div class="col-sm-9">
+					<input type="text" class="form-control" id="username" name="username" placeholder="用户名" required>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-3 control-label" for="password">密码</label>
+				<div class="col-sm-9">
+					<input type="password" class="form-control" id="password" name="password" placeholder="密码" required>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-offset-3 col-sm-9">
+					<button type="submit" class="btn btn-primary">登录</button>
+				</div>
+			</div>
+		</fieldset>
+	</form>
+</div>
+<% include footer.html %>
+```
+<strong>home.html</strong>
+```html
+<% include header.html %>
+<h1>Welcome <%= user.username %>,欢迎登录！！</h1>
+<a class="btn" href="/logout">退出</a>
+<% include footer.html %>
+```
+### 2、路由
+打开app.js，增加路由配置：
+```js
+app.use('/', index);
+app.use('/users', users);
+app.use('/login', index);
+app.use('/logout', index);
+app.use('/home', index);
+```
+打开routes/index.js文件，添加对应的方法：
+```js
+var express = require('express');
+var router = express.Router();
+
+/* GET home page. */
+router.get('/', function(req, res, next) {
+  res.render('index', { title: 'Express' });
+});
+
+router.route('/login').get(function(req, res){
+	res.render('login', {title: '用户登录'});
+}).post(function(req, res){
+	var user = {
+		username: 'kingbora',
+		password: '520kingbora'
+	}
+	if (req.body.username === user.username && req.body.password === user.password) {
+		res.redirect('/home');
+	} else {
+		res.redirect('/login');
+	}
+});
+
+router.get('/logout', function(req, res) {
+	res.redirect('/');
+});
+
+router.get('/home', function(req, res) {
+	var user = {
+		username: 'kingbora',
+		password: '520kingbora'
+	}
+	res.render('home', {title: 'Home', user: user});
+});
+
+module.exports = router;
+```
+<p>重启服务，重新访问。</p>
+### 3、session
+安装中间件express-session:
+<code>$ npm install express-session --save</code>
+安装中间件connect-mongodb:
+<code>$ npm install connect-mongodb --save</code>
