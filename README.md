@@ -163,7 +163,7 @@ module.exports = router;
 ```
 <p>重启服务，重新访问。</p>
 ### 3、session
-安装中间件express-session:
+<p>安装中间件express-session:</p>
 <code>$ npm install express-session --save</code>
-安装中间件connect-mongodb:
+<p>安装中间件connect-mongodb:</p>
 <code>$ npm install connect-mongodb --save</code>
